@@ -42,14 +42,6 @@ body {
   overflow-x: hidden;
   justify-content: space-around;
 }
-
-elemant{
-  -webkit-overflow-scrolling:touch;
-}
-
-elemant > *{
-  -webkit-transform: translateZ(0px);
-}
   
 .test {
   position: absolute;
