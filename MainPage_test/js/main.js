@@ -1,25 +1,29 @@
-import {main} from "./tower.js"
+import { main } from "./tower.js"
 
 $(function() {
 // model position control
     let windowSize = window.matchMedia("(min-width: 768px)")
+    let mainTower;
     function modelControl(size) {
         if (size.matches) { // If media query matches
-            main(750, 30);
+            mainTower = main(750, -20, true);
         } else {
-            main(500, 120);
+            mainTower = main(485, 0, false);
         }
+        mainTower;
     }
     modelControl(windowSize) // Call listener function at run time
     windowSize.addListener(modelControl);    
 //btn open
     $(".panel-collapse").on('show.bs.collapse', function() {
         $(this).siblings('.card_a_close').addClass('active');
-        console.log("open");
+        $(this).siblings('.card_d_close').addClass('active');
+     //   console.log("open");
     })
     $('.panel-collapse').on('hide.bs.collapse', function () {
         $(this).siblings('.card_a_close').removeClass('active');
-        console.log("hide");
+        $(this).siblings('.card_d_close').removeClass('active');
+    //    console.log("hide");
     })
 
 
@@ -41,15 +45,17 @@ $(function() {
         var position = $(('section:nth-of-type('+i+')')).offset().top;
         
         ah[ i-1 ] = position;
-        console.log(i+'p=' +position);
-        console.log(i+'ap=' +ah);
+    //    console.log(i+'p=' +position);
+    //    console.log(i+'ap=' +ah);
     }
 
-    var windowHeight = window.innerHeight;
-    console.log('window h = ' + windowHeight);
+    let windowHeight = window.innerHeight;
+    let windowWidth = window.innerWidth;
+    //console.log('window h = ' + windowHeight);
 
     $(document).scroll(function() {
         $('html,body').scrollLeft(0);
+        //mainTower.rotate_scroll();
         var scrollPos = $(this).scrollTop();
         for (var i = 1; i <= 16; i++) {
             if(scrollPos >= ah[i-1] - windowHeight/1.5){
@@ -58,39 +64,73 @@ $(function() {
              //   console.log('show');
             }
         }
+
+        for (var i = 14; i <= 15; i++) {
+            if(scrollPos >= ah[i-1] - windowHeight/1.5){
+                console.log('show');
+                $('section:nth-of-type('+i+') logo').addClass('fade_in_logo');
+            }
+        }
     })
+
+    
 
     // hide and show navbar
     $(window).scroll(function () {
         let sc = $(window).scrollTop();
-        //let card_start = $("#theme").offset().top;
+        let card_start = $("#theme").offset().top - window.innerHeight/4;
         //console.log('max height: ' + card_start);
-        let windowWidth = window.innerWidth;
-        let windowHeight = window.innerHeight;
-    
         if (windowWidth > 768) {
-            if(sc > windowHeight){
-                $("#com-navbar").fadeIn();
-                $("#top_navbar").fadeIn();
+            if(sc > card_start){
+                $("#top_navbar").fadeIn(200);
+                $("#com-navbar").fadeIn(800);
             }
             else {
                 $("#com-navbar").fadeOut();
-                $("#top_navbar").fadeOut();
+                $("#top_navbar").fadeOut(800);
             }
         }
+        // phone main page background
+        // only work when head
+        if(sc < windowHeight*1.5){
+            let targetOpacity = 0.8;
+            targetOpacity = (1 - sc/(windowHeight*0.8))*targetOpacity;
+            $('.main_phone').css({
+                'background-color': 'rgba(0, 0, 0, '+ targetOpacity +')',
+                'box-shadow': 'inset 0px -30px 15px -10px rgba(34,34,34, ' + targetOpacity +')'
+            });
+        }
     });
+
+    // refresh when resize
+    let $window = $(window);
+    let width = $window.width();
+    let height = $window.height();
+
+    setInterval(function () {
+        if ((width != $window.width()) || (height != $window.height())) {
+            width = $window.width();
+            height = $window.height();
+            location.reload();
+            //console.log("resized!");
+        }
+    }, 300);
+    //when load reset tower
+    window.onbeforeunload = () => {  
+        window.scrollTo(0, 0);  
+    };
 });
 
 //導航列位置指示
 //scrollmagic init
 let controller = new ScrollMagic.Controller();
 // let sections = [$("#theme_href"),$("#speaker_href"),$("#schedule_href"),$("#Apply_href"),$("#FAQ_href"),$("#Group_href")];
-let sections = [$("#theme"),$("#speaker"),$("#schedule"),$("#Apply"),$("#FAQ"),$("#Group"),$("#contant")];
+let sections = [$("#theme"),$("#speaker"),$("#schedule"),$("#Apply"),$("#FAQ"),$("#Previous"),$("#Group"),$("#contant")];
 
 
 for(let i=0; i<sections.length-1; i++) {
 	let sectionId = sections[i].attr("id");
-	let sectionHeight =  sections[i+1].offset().top - sections[i].offset().top + window.innerHeight/2;
+	let sectionHeight =  sections[i+1].offset().top - sections[i].offset().top;
 	let scene = new ScrollMagic.Scene({triggerElement: "#"+sectionId, duration: sectionHeight})
 	.setClassToggle("#menu"+i, "active")
 	.addTo(controller);
@@ -278,11 +318,6 @@ const groupInfo = {
         "department": "數位內容碩士學位學程"
     },
     {
-        "name": "林敬翔",
-        "school": "國立臺灣大學",
-        "department": "工程科學及海洋工程"
-    },
-    {
         "name": "艾奎華",
         "school": "國立陽明交通大學",
         "department": "多媒體工程所"
@@ -320,7 +355,7 @@ const groupInfo = {
     "PUBLICITY": [{
         "name": "林雨翾",
         "school": "國立政治大學",
-        "department": "廣告系"
+        "department": "廣告系 / 數位內容學程"
     },
     {
         "name": "林思穎",
@@ -391,6 +426,23 @@ const groupInfo = {
         "name": "黃晴",
         "school": "國立清華大學",
         "department": "電機資訊學院學士班"
+    },
+    {
+        "name": "林奕碩",
+        "school": "國立台灣大學",
+        "department": "資訊工程研究所"
+    }
+    ,
+    {
+        "name": "鄭伯俞",
+        "school": "國立陽明交通大學",
+        "department": "資訊工程研究所"
+    }
+    ,
+    {
+        "name": "高語萱",
+        "school": "國立臺灣大學",
+        "department": "資訊管理研究所"
     }],
 }
 
@@ -401,26 +453,14 @@ const speakerInfo = [{
     "speech_title": "物件召喚的可能世界與纏結美學",
     "speech_description": "資訊科技快速發展的今日，設計物將具備更高的智能，以及更高的自主性與能動性。上世紀模態邏輯學及文學領域中所發展的可能世界理論，將人類所認知的實在(reality)從現實世界(actual world)拓展到可能世界(possible world)。然而，以人類為中心所建構的可能世界，正在面臨新的挑戰：智慧型的物件，如何邀請人類進入非人類中心的可能世界並召喚纏結的經驗。"
 },{
-    "name": "陳彥仰",
-    "title": "臺大資訊工程學系 / 資訊網路與多媒體研究所 | 教授",
-    "profile_picture": "./image/speaker/profile_default_2.jpeg",
-    "speech_title": "敬請期待",
-    "speech_description": ""
-},{
     "name": "何樵暐",
     "title": "Digital Medicine Lab | 負責人",
     "profile_picture": "./image/speaker/profile_default_2.jpeg",
     "speech_title": "敬請期待",
     "speech_description": ""
 },{
-    "name": "楊振甫",
-    "title": "DreamVok / 5% design action | 執行長",
-    "profile_picture": "./image/speaker/profile_default_2.jpeg",
-    "speech_title": "敬請期待",
-    "speech_description": ""
-},{
-    "name": "陳威帆",
-    "title": "Fourdesire | 創辦人暨產品製作人",
+    "name": "更多講者接洽中",
+    "title": " ",
     "profile_picture": "./image/speaker/profile_default_2.jpeg",
     "speech_title": "敬請期待",
     "speech_description": ""
