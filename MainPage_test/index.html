@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://kit.fontawesome.com/cbd91073cd.js" crossorigin="anonymous"></script>
-        <title>Main Page Test</title>
+        <title>OpenHCI 2022</title>
         <link href="css/main.css" rel="stylesheet">
     </head>
 
@@ -20,6 +20,10 @@
         </a>
         <a class="navbar-brand nav-link" href="#home">
             <img src="image/cyberoasis.png" alt="" style="filter: drop-shadow(0px 0px 8px #6BAC9A);">
+        </a>
+        <!-- only appear when computer -->
+        <a class="navbar-brand navbutton-fb">
+            <button type="button" class="cta_btn" onclick="window.open('https://www.facebook.com/openhci')">我要報名！</button>
         </a>
         <!-- .navbar-toggler 漢堡式選單按鈕 -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,7 +49,10 @@
                 <a class="nav-link" id="menu4" href="#FAQ">FAQ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="menu5" href="#Group">籌辦團隊</a>
+                <a class="nav-link" id="menu5" href="#Previous">歷屆作品</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="menu6" href="#Group">籌辦團隊</a>
               </li>
               <li class="nav-item">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent">
@@ -69,7 +76,7 @@
                     <img src="image/date.svg" class="col-10" style="margin-top: 10vh;">
                 </div>
             </div>
-            <div class = "box main_title row" style="height: 80vh;">
+            <div class = "box main_title row" style="height: 60vh;">
                 <div class="box-title T-C col-md-8 align-self-start">第1 2 屆O p e n H C I 人機互動工作坊</div>
                 <img src="image/cyberoasis.png" class="col-11 offset-col-1">
                 <nav class="side-nav col-12">
@@ -105,6 +112,12 @@
                             </a>
                         </li>
                         <li class="slide-nav-items">
+                            <a class="nav-link" href="#Previous">
+                                <span class="slide-text">歷屆作品</span>
+                                <img class="side-nav-icon" src="image/tree.png">
+                            </a>
+                        </li>
+                        <li class="slide-nav-items">
                             <a class="nav-link" href="#Group">
                                 <span class="slide-text">籌辦團隊</span>
                                 <img class="side-nav-icon" src="image/tree.png">
@@ -115,7 +128,6 @@
             </div>
         </section>
 
-        <div id = "theme_href"></div>
         <!-- section theme-->
         <section id = "theme">
             <div class= "box">
@@ -191,7 +203,7 @@
                                 <t-20>前置工作坊<t-20>
                             </card-title>
                             <div>
-                                <p>8/13 - 8/14</p>
+                                <p>8 / 13 - 8 / 14</p>
                                 <ls>
                                     <li>「人機互動」的先修知識</li>
                                     <li>設計思考</li>
@@ -214,7 +226,7 @@
                                 <t-20>正式工作坊<t-20>
                             </card-title>
                             <div>
-                                <p>8/26 - 8/28</p>
+                                <p>8 / 26 - 8 / 28</p>
                                 <ls>
                                     <li>人機互動實戰課程</li>
                                     <li> HCI 學術 / 業界的講師與學長姐</li>
@@ -332,102 +344,94 @@
             </div>
         </section>
 
+        <div id="TAICHI_href"></div>
+        <section id = "TAICHI">
+            <div class= "box">
+                <div class="box-title T-E">TAICHI X OpenHCI</div>
+                <div class="card_c blue_background">
+                    <card-title><t-20>About TAICHI’ 22<t-20></card-title>
+                    <p>
+                        TAICHI 2022（第八屆臺灣人機互動研討會）為臺灣人機互動學會主辦，
+                        並由來自各大專院校、產業界的人機互動領域專家共同籌辦，集結各領域、院校、產業間的跨界合作。
+                        大會於10月15日至10月16日於國立陽明交通大學六家校區客家文化學院舉行。<br><br>
+                        當人工智慧（artificial intelligence，AI）已廣泛應用於人類世界，它所帶來的爭議、福祉與變遷皆備受矚目。
+                        在社會、經濟、健康或環境等眾多領域的應用上，人工智慧如何在克服議題的同時，依然保有道德倫理之底線？
+                        本次大會主題「AI for Equity, Wellbeing & Sustainability」，
+                        旨在探討人工智慧如何貼近真實世界與人性的萬千變化、如何為世界帶來福祉，以及如何實踐永續的未來。
+                    </p>
+                </div>
+                <div class="card_c blue_background">
+                    <card-title><t-20>OpenHCI 與 TAICHI 合作<t-20></card-title>
+                    <p>
+                        你想要讓自己的作品在台灣人機互動年度盛會TAICHI被看見嗎？<br>
+                        TAICHI 是台灣人機互動研究領域中最具代表性的研討會，由台灣人機互動學會所舉辦的年度會議，
+                        為國內跨領域人機互動學者與社群，提供一個意見交換以及成果交流的年度盛會。<br><br>
+                        OpenHCI 工作坊結束之後，OpenHCI將推薦各組成果作品至TAICHI年會展示，
+                        除了學員能夠於會議中發表自己的作品、增加曝光度外，也有機會跟眾多國內外HCI、UXD專家交流，
+                        不管是向學界、業界前輩取經，或是互相分享經驗，相信對學員的未來求學或工作都有相當大的幫助。
+                    </p>
+                </div>
+            </div>
+        </section>
+
         <div id="speaker_href"></div>
         <section id="speaker">
             <div class= "box">
                 <div class="box-title T-E">Keynote Speaker</div>
                 <div class="box-title T-C">演講者</div>
 
-                <div id="Speaker_phone">
-                    <div class="schedule_box">
-                        <!-- <div class="card_d">
-                            <img class="card_d_img">
-                            <p style="font-size: 24px;">Speaker’s Name</p>
-                            <p style="font-size: 14px;">Job Title</p>
-                            <p style="font-size: 18px; color:#A9EEFD;">Speech Title</p>
-                            <p style="font-size: 14px;">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices tellus aliquam, suspendisse leo. Dui morbi quis morbi ornare in. Ut erat aenean porttitor donec odio eget porta nisi integer. Dolor vitae neque fames massa ac.
-                            </p>
-                        </div>
+                <div class="row justify-content-around">
+                    <div class="col-12 col-xl-6 speaker_phone" style="margin: 0;">
                         <div class="card_d">
-                            <img class="card_d_img">
-                            <p style="font-size: 24px;">Speaker’s Name</p>
-                            <p style="font-size: 14px;">Job Title</p>
-                            <p style="font-size: 18px; color:#A9EEFD;">Speech Title</p>
-                            <p style="font-size: 14px;">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices tellus aliquam, suspendisse leo. Dui morbi quis morbi ornare in. Ut erat aenean porttitor donec odio eget porta nisi integer. Dolor vitae neque fames massa ac.
-                            </p>
+                            <div>
+                                <div class="card_Speaker">
+                                    <img class="card_d_img" style="border-radius: 5200px;" src="./image/speaker/梁容輝老師.jpg">
+                                    <div class="card_d_text">
+                                        <div>
+                                            <card-title><t-16>梁容輝</t-16> </card-title> 
+                                            <p> 臺科大設計系 | 副教授</p>
+                                        </div>
+                                        <div>
+                                            <p-s style="line-height: 0.5;">演講主題</p-s><br>
+                                            <p-s style="line-height: 0.5;">物件召喚的可能世界與纏結美學</p-s>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="Speaker1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                    <p style="font-size: 14px;">
+                                    資訊科技快速發展的今日，設計物將具備更高的智能，以及更高的自主性與能動性。
+                                    上世紀模態邏輯學及文學領域中所發展的可能世界理論，將人類所認知的實在(reality)從現實世界(actual world)拓展到可能世界(possible world)。
+                                    然而，以人類為中心所建構的可能世界，正在面臨新的挑戰：智慧型的物件，如何邀請人類進入非人類中心的可能世界並召喚纏結的經驗。</p>
+                                </div>
+                                <div class="card_d_close">
+                                    <i class="fa-solid fa-chevron-down" style="margin-top: 15px; float: right;" role="button" data-toggle="collapse" data-parent="#accordion" href="#Speaker1" aria-expanded="true" aria-controls="Speaker1"></i>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card_d">
-                            <img class="card_d_img">
-                            <p style="font-size: 24px;">Speaker’s Name</p>
-                            <p style="font-size: 14px;">Job Title</p>
-                            <p style="font-size: 18px; color:#A9EEFD;">Speech Title</p>
-                            <p style="font-size: 14px;">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices tellus aliquam, suspendisse leo. Dui morbi quis morbi ornare in. Ut erat aenean porttitor donec odio eget porta nisi integer. Dolor vitae neque fames massa ac.
-                            </p>
-                        </div> -->
+                    
                     </div>
-                </div>
-
-
-                <div id="carouselSpeaker"  class="carousel slide" data-ride="carousel">
-                    <!-- <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="card_d">
-                                <img class="card_d_img">
-                                <p style="font-size: 24px;">Speaker’s Name</p>
-                                <p style="font-size: 14px;">Job Title</p>
-                                <p style="font-size: 18px; color:#A9EEFD;">Speech Title</p>
-                                <p style="font-size: 14px;">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices tellus aliquam, suspendisse leo. Dui morbi quis morbi ornare in. Ut erat aenean porttitor donec odio eget porta nisi integer. Dolor vitae neque fames massa ac.
-                                </p>
+                    <div class="col-12 col-xl-6 speaker_phone" style="margin: 0;">
+                        <div class="card_d card_height" style="align-items: center;">
+                            <div style="margin: auto;">
+                                <card-title><t-16>敬請期待</t-16> </card-title> 
                             </div>
                         </div>
-                        <div class="carousel-item">
-                            <div class="card_d">
-                                <img class="card_d_img">
-                                <p style="font-size: 24px;">Speaker’s Name</p>
-                                <p style="font-size: 14px;">Job Title</p>
-                                <p style="font-size: 18px; color:#A9EEFD;">Speech Title</p>
-                                <p style="font-size: 14px;">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices tellus aliquam, suspendisse leo. Dui morbi quis morbi ornare in. Ut erat aenean porttitor donec odio eget porta nisi integer. Dolor vitae neque fames massa ac.
-                                </p>
+                    </div>
+                    <div class="col-12 col-xl-6 speaker_phone" style="margin: 0;">
+                        <div class="card_d card_height" style="align-items: center;">
+                            <div style="margin: auto;">
+                                <card-title><t-16>敬請期待</t-16> </card-title> 
                             </div>
                         </div>
-                        <div class="carousel-item">
-                            <div class="card_d">
-                                <img class="card_d_img">
-                                <p style="font-size: 24px;">Speaker’s Name</p>
-                                <p style="font-size: 14px;">Job Title</p>
-                                <p style="font-size: 18px; color:#A9EEFD;">Speech Title</p>
-                                <p style="font-size: 14px;">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices tellus aliquam, suspendisse leo. Dui morbi quis morbi ornare in. Ut erat aenean porttitor donec odio eget porta nisi integer. Dolor vitae neque fames massa ac.
-                                </p>
+                    </div>
+                    <div class="col-12 col-xl-6 speaker_phone" style="margin: 0;">
+                        <div class="card_d card_height" style="align-items: center;">
+                            <div style="margin: auto;">
+                                <card-title><t-16>敬請期待</t-16> </card-title> 
                             </div>
                         </div>
-                    </div> -->
-
-
-                    <a class="carousel-control-prev" href="#carouselSpeaker" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselSpeaker" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
- 
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselSpeaker" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselSpeaker" data-slide-to="1"></li>
-                        <li data-target="#carouselSpeaker" data-slide-to="2"></li>
-                        <li data-target="#carouselSpeaker" data-slide-to="3"></li>
-                        <li data-target="#carouselSpeaker" data-slide-to="4"></li>
-                    </ol>
-                </div>
-                
-
+                    </div>
+                </div>         
             </div>
         </section>
 
@@ -462,37 +466,6 @@
             </div>
         </section>
 
-        <div id="TAICHI_href"></div>
-        <section id = "TAICHI">
-            <div class= "box">
-                <div class="box-title T-E">TAICHI X OpenHCI</div>
-                <div class="card_c blue_background">
-                    <card-title><t-20>About TAICHI’ 22<t-20></card-title>
-                    <p>
-                        TAICHI 2022（第八屆臺灣人機互動研討會）為臺灣人機互動學會主辦，
-                        並由來自各大專院校、產業界的人機互動領域專家共同籌辦，集結各領域、院校、產業間的跨界合作。
-                        大會於10月15日至10月16日於國立陽明交通大學六家校區客家文化學院舉行。<br><br>
-                        當人工智慧（artificial intelligence，AI）已廣泛應用於人類世界，它所帶來的爭議、福祉與變遷皆備受矚目。
-                        在社會、經濟、健康或環境等眾多領域的應用上，人工智慧如何在克服議題的同時，依然保有道德倫理之底線？
-                        本次大會主題「AI for Equity, Wellbeing & Sustainability」，
-                        旨在探討人工智慧如何貼近真實世界與人性的萬千變化、如何為世界帶來福祉，以及如何實踐永續的未來。
-                    </p>
-                </div>
-                <div class="card_c blue_background">
-                    <card-title><t-20>OpenHCI 與 TAICHI 合作<t-20></card-title>
-                    <p>
-                        你想要讓自己的作品在台灣人機互動年度盛會TAICHI被看見嗎？<br>
-                        TAICHI 是台灣人機互動研究領域中最具代表性的研討會，由台灣人機互動學會所舉辦的年度會議，
-                        為國內跨領域人機互動學者與社群，提供一個意見交換以及成果交流的年度盛會。<br><br>
-                        OpenHCI 工作坊結束之後，OpenHCI將推薦各組成果作品至TAICHI年會展示，
-                        除了學員能夠於會議中發表自己的作品、增加曝光度外，也有機會跟眾多國內外HCI、UXD專家交流，
-                        不管是向學界、業界前輩取經，或是互相分享經驗，相信對學員的未來求學或工作都有相當大的幫助。<br><br>
-                        除此之外，參展隊伍所有成員都可以免註冊費參加TAICHI會議期間各場次活動喔！這麼難得的機會，只有OpenHCI學員才有呢～
-                    </p>
-                </div>
-            </div>
-        </section>
-
         <div id="Apply_href"></div>
         <!-- section Apply -->
         <section id = "Apply">
@@ -502,7 +475,7 @@
                 <div class="card_c">
                     <div>
                         <p><blue-text><p-t>【 報名資格 】 </p-t></blue-text></p>
-                        <p>全國各大專院校升大三以上在學生，含學碩博應屆畢業生及新生。</p>
+                        <p>全國各大專院校升大三以上在學生，含學碩博應屆畢業生及碩博新生。</p>
                     </div>
                     <div>
                         <p><blue-text><p-t>【 報名方式 】 </p-t></blue-text></p>
@@ -511,9 +484,9 @@
                     <div>
                         <p><blue-text><p-t>【 招生時程 】 </p-t></blue-text></p>
                         <p>
-                            線上報名時間：7/18（一） 21:00 至 7/20（三） 23:59'59<br><br>
-                            正取名單公佈：7/08（日） 10:00 網路公佈與信件通知<br>
-                            遞補備取通知：7/11（三） 個別電話通知
+                            2022 年 7 月 18 日（一）<br>至 2022 年 7 月 25 日（一） 23:59<br><br>
+                            正取名單公佈： 2022 年 8 月 1 日（一） 網路公布與信件通知<br>
+                            遞補備取通知： 2022 年 8 月 3 日（三） 
                         </p>
                     </div>
                     
@@ -524,8 +497,10 @@
                 <div class="box-title T-E">Registration fee</div>
                 <div class="box-title T-C">報名費用</div>
                 <div class="card_c">
-                    <p>由於活動規模擴大，為求活動品質，每學員收取<blue-text>3000元保證金</blue-text>。<br>
-                        費用會於活動結束後，學員確實參與全程並獲得證書後全額歸還。
+                    <p>
+                        為推廣 HCI 學門，本活動<blue-text>免報名費，僅收取保證金 1000 元、保險費 62 元及其他費用（住宿等費用）。</blue-text><br>
+                        獲得錄取資格之學員，請於指定時間內繳交各項費用，繳費後方能取得正式資格。
+                        為維持完整學習體驗，工作坊實行<blue-text>每日簽到，學員需全程參與以獲得保證金全額退還。</blue-text>             
                     </p>
                 </div>
             </div>
@@ -536,21 +511,19 @@
                 <div class="card_c gray_background">
                     <card-title><t-20>Form Introdutcion</t-20><br>
                                 <t-16>報名表單說明</t-16></card-title>
-                    <p>包含「資料填寫」和「IDCard 製作」兩部份：<br>
-                        「資料填寫」包含個人基本資料、相關經歷等內容。<br>
-                        「IDCard 製作」內容包含 「個人簡歷」 、「作品集」與「問題回答」。<br>
-                        請依格式製作一份三頁之A4橫式PDF檔，將檔案附件於表單最後的「檔案上傳」欄位。
+                    <p>包含「基本資料」和「IDcard 製作」兩部份：<br><br>
+                        <blue-text>「基本資料」</blue-text><br>包含個人基本資料、相關經歷等內容。<br>
+                        <blue-text>「IDcard 製作」</blue-text><br>
+                        包含「個人簡歷」、「參與工作坊動機」、「作品集」、「回答問題」，請將檔案附在表單的最後，也請注意檔案連結權限。
                     </p>
                 </div>
                 <div class="card_c gray_background">
                     <card-title><t-20>IDcard specification</t-20><br>
                         <t-16>IDcard 格式規範</t-16></card-title>
-                    <p>IDCard 檔案請自行製作與編排，<br>
-                        並輸出PDF檔。<br>
-                        <blue-text>
-                            IDCard 檔名格式：<br> IDCard_姓名 (範例：IDCard_王曉明)。<br>
-                        </blue-text>
-                        若檔案格式或檔名格式不符，造成漏檔，報名者請自行負責。
+                    <p>
+                        1. <br>IDcard 檔案請依製作內容說明自行製作與編排，並輸出一份<blue-text>三頁之A4橫式PDF檔。</blue-text><br><br>
+                        2. <br>IDcard 檔名格式：<blue-text>IDcard_姓名</blue-text>（範例：IDcard_黃小華）<br><br>
+                        3. <br>若檔案格式或檔名格式不符，造成漏檔，或是忘記開放雲端連結權限，報名者請自行負責。
                     </p>
                 </div>
             </div>
@@ -560,24 +533,24 @@
                 <div class="box-title T-C">IDcard製作內容說明</div>
                 <div class="card_c yellow_background">
                     <card-title><t-20>第一頁｜個人簡歷</t-20></card-title>
-                    <p>請放個人簡歷，表達格式不限。</p>
+                    <p>請放個人簡歷、說明報名動機，表達格式不限。</p>
                 </div>
                 <div class="card_c yellow_background">
                     <card-title><t-20>第二頁｜作品集</t-20></card-title>
-                    <p>請放上個人最滿意的作品（研究、專題、設計皆可），可透過文字、圖片或另附影片表達。</p>
+                    <p>請放上一個最滿意的作品（研究、專題、設計皆可），可以明確表達作品的脈絡：作品目標、想要傳達的意象、流程、解決什麼問題、如何解決問題等。</p>
                 </div>
                 <div class="card_c yellow_background">
                     <card-title><t-20>第三頁｜問題回答</t-20></card-title>
-                    <p>請從你的經驗中去發想並回答以下兩問題，可透過文字、圖片或另附影片表達，數量、格式均不限。</p>
+                    <p>請從你的經驗中去發想並回答以下問題，共分為團隊題與分析題兩部分，可透過文字、圖片等形式表達。</p>
                 </div>
 
                 <div class="card_a yellow_background">
                     <div class="card_a_close">
-                        <card-title id="card_a_title"><t-20>ID Card 問題一<t-20></card-title>
+                        <card-title id="card_a_title"><t-20>IDcard 問題一<t-20></card-title>
                         <i class="fa-solid fa-chevron-down" role="button"  data-toggle="collapse" data-parent="#accordion" href="#collapse_IDCard_Q1" aria-expanded="true" aria-controls="collapse_IDCard_Q1"></i>
                     </div>
                     <div id="collapse_IDCard_Q1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                        <p><p-t>【 專案經驗題 】</p-t></p>
+                        <p><p-t><blue-text>【 專案經驗題 】</blue-text></p-t></p>
                         <p>
                             請簡單分享一個你過去印象深刻的專案經驗。（說明在團體中扮演的角色、遇到怎麼樣的困難及如何解決。）
                         </p>
@@ -585,14 +558,15 @@
                 </div>
                 <div class="card_a yellow_background ID_Card_Q2">
                     <div class="card_a_close">
-                        <card-title id="card_a_title"><t-20>ID Card 問題二<t-20></card-title>
+                        <card-title id="card_a_title"><t-20>IDcard 問題二<t-20></card-title>
                         <i class="fa-solid fa-chevron-down" role="button"  data-toggle="collapse" data-parent="#accordion" href="#collapse_IDCard_Q2" aria-expanded="true" aria-controls="collapse_IDCard_Q2"></i>
                     </div>
                     <div id="collapse_IDCard_Q2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                        <p><p-t>【 對主題的想法 】</p-t></p>
+                        <p><p-t><blue-text>【 主題想法題 】</blue-text></p-t></p>
                         <p>
-                            OpenHCI 2022 的主題為 CyberOasis，希望透過科技達到永續發展的目標。
-                            請參考聯合國提出的SDGs與今年的主題論述，分享一項你認為具有參考性的案例，內容須包含：<br><br>
+                            OpenHCI 2022 的主題為 CyberOasis（賽博綠洲），意在描繪人類、科技物與環境三方共融的未來藍圖。
+                            而近幾年國際與各方企業也十分熱衷討論的聯合國 SDGs，也同樣期望能達到環境永續、身心健全、社會公平等面向。<br>
+                            請參考今年的主題論述與聯合國提出的SDGs，分享一項你認為具有參考性的案例，內容須包含：<br><br>
                             a.　這個案例具體在解決什麼樣的問題？<br>
                             b.　「科技」在這個案例扮演什麼樣的角色？<br>
                             c.　「人」在這個案例扮演什麼樣的角色？<br>
@@ -636,8 +610,8 @@
                     </div>
                 </div>
             </div>
-
-            <div class= "box">
+            <!--  要放的話搬去工作坊介紹後面，按鈕連結到報名方法anchor
+                <div class= "box">
                 <div class="box-title T-E">Sign Up</div>
                 <div class="card_c">
                     <card-title><t-20>報名入口</t-20></card-title>
@@ -645,12 +619,13 @@
                         透過以上的內容，你是不是更暸解Open HCI 了呢？<br>
                         如果有想更近一步報名參加我們的工作坊，也歡迎到 FB 的粉絲專頁暸解更多資訊喔！
                     </p>
-
                     <div class="card_f">
                         <button type="button" class="cta_btn" onclick="window.open('https://www.facebook.com/openhci')">我要報名！</button>
                     </div>
                 </div>
             </div>
+            -->
+            
         </section>
 
         <div id="FAQ_href"></div>
@@ -702,17 +677,17 @@
                 <!--ID CARD-->
                 <div class="card_a">
                     <div class="card_a_show">
-                        <card-title><t-20>ID Card</t-20></card-title>
+                        <card-title><t-20>IDcard</t-20></card-title>
                         <p><br>
-                            Q1 : 什麼是ID Card呢？要怎麼寫？<br>
+                            Q1 : 什麼是IDcard呢？要怎麼寫？<br>
                         <blue-text>
-                            A1 : ID Card 是籌備團隊認識你的方式，讓籌備團隊更暸解你的特質、專長以及過去的經歷，以及對此活動及一些議題的看法。別擔心！盡情展現自己就對了！
+                            A1 : IDcard 是籌備團隊認識你的方式，讓籌備團隊更暸解你的特質、專長以及過去的經歷，以及對此活動及一些議題的看法。別擔心！盡情展現自己就對了！
                         </blue-text>
                         </p>
                     </div>
                     <div id="collapse_IDCard" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                         <p>
-                            Q2 : ID Card 的一頁作品集可以放什麼？<br>
+                            Q2 : IDcard 的一頁作品集可以放什麼？<br>
                             <blue-text>
                                 A2 : 無論你來自什麼背景，<br>
                                 請選擇「一」個你最滿意、最喜歡且足以代表你專業能力的作品來進行介紹，
@@ -720,13 +695,13 @@
                             </blue-text>
                         </p><br>
                         <p>
-                            Q3 : 對IDCard第三頁中要回答的內容還是沒什麼想法怎麼辦？<br>
+                            Q3 : 對IDcard第三頁中要回答的內容還是沒什麼想法怎麼辦？<br>
                             <blue-text>
                                 A3 : 可以多留意生活周遭的事物與經驗來發想，還有敬請期待歷屆學員分享的內容！
                             </blue-text>
                         </p><br>
                         <p>
-                            Q4 : IDCard內作品的相關隱私規範？<br>
+                            Q4 : IDcard內作品的相關隱私規範？<br>
                             <blue-text>
                                 A4 : 上傳作品集僅供主辦團隊內部審核。
                             </blue-text>
@@ -741,25 +716,16 @@
             </div>
         </section>
 
-        <div id="Group_href"></div>
-        <!-- section Group -->
-        <section id = "Group">
-            <div class= "box">
-                <div class="box-title T-E">Group</div>
-                <div class="box-title T-C">團隊</div>
-            </div>
-        </section>
-        
         <!-- section Previous -->
         <section id = "Previous">
             <div class= "box">
                 <div class="box-title T-E">Previous Works</div>
                 <div class="box-title T-C">歷屆作品</div>
                 <div class="row  justify-content-around">
-                    <div class="col-11 col-md-6" style="margin: 0;">
+                    <div class="col-12 col-md-6" style="margin: 0;">
                         <div class="card_a">
                             <div class="card_a_show">
-                                <a href="https://www.youtube.com/watch?v=pCtAFKTj8-A&list=PL5Zz58VdLY58wGAr6sZ5gf8XR5R-awn5T" target="_blank">
+                                <a href="https://youtu.be/pCtAFKTj8-A" target="_blank">
                                     <img class="card_g_img" src="image/work1.png" data-toggle="tooltip" data-placement="right" title="點擊圖片進入youtube"></a>
                                 <card-title><t-20>時光雞</t-20></card-title> <br>
                                 <card-title><t-16>最佳互動獎</t-16></card-title> 
@@ -775,10 +741,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-11 col-md-6" style="margin: 0;">
+                    <div class="col-12 col-md-6" style="margin: 0;">
                         <div class="card_a">
                             <div class="card_a_show">
-                                <a href="https://www.youtube.com/watch?v=pCtAFKTj8-A&list=PL5Zz58VdLY58wGAr6sZ5gf8XR5R-awn5T&index=2" target="_blank">
+                                <a href="https://youtu.be/Bi4Os9LyU5M" target="_blank">
                                     <img class="card_g_img" src="image/work2.png" data-toggle="tooltip" data-placement="right" title="點擊圖片進入youtube"></a>
                                 <card-title><t-20>蒲呼呼</t-20></card-title> <br>
                                 <card-title><t-16>最佳故事獎</t-16></card-title> 
@@ -797,10 +763,10 @@
                     </div>                
                 </div>
                 <div class="row  justify-content-around">
-                    <div class="col-11 col-md-6" style="margin: 0;">
+                    <div class="col-12 col-md-6" style="margin: 0;">
                         <div class="card_a">
                             <div class="card_a_show">
-                                <a href="https://www.youtube.com/watch?v=pCtAFKTj8-A&list=PL5Zz58VdLY58wGAr6sZ5gf8XR5R-awn5T&index=3" target="_blank">
+                                <a href="https://youtu.be/icHVRLLE944" target="_blank">
                                     <img class="card_g_img" src="image/work3.png" data-toggle="tooltip" data-placement="right" title="點擊圖片進入youtube"></a>
                                 <card-title><t-20>READEE</t-20></card-title> <br>
                                 <card-title><t-16>最佳簡報獎</t-16></card-title> 
@@ -817,10 +783,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-11 col-md-6" style="margin: 0;">
+                    <div class="col-12 col-md-6" style="margin: 0;">
                         <div class="card_a">
                             <div class="card_a_show">
-                                <a href="https://www.youtube.com/watch?v=pCtAFKTj8-A&list=PL5Zz58VdLY58wGAr6sZ5gf8XR5R-awn5T&index=4" target="_blank">
+                                <a href="https://youtu.be/Av9xV6ZbyhY" target="_blank">
                                     <img class="card_g_img" src="image/work4.png" data-toggle="tooltip" data-placement="right" title="點擊圖片進入youtube"></a>
                                 <card-title><t-20>尋找湖泊</t-20></card-title> <br>
                                 <card-title><t-16>最佳造型獎</t-16></card-title> 
@@ -841,10 +807,10 @@
                     </div>
                 </div>
                 <div class="row  justify-content-around">
-                    <div class="col-11 col-md-6" style="margin: 0;">
+                    <div class="col-12 col-md-6" style="margin: 0;">
                         <div class="card_a">
                             <div class="card_a_show">
-                                <a href="https://www.youtube.com/watch?v=pCtAFKTj8-A&list=PL5Zz58VdLY58wGAr6sZ5gf8XR5R-awn5T&index=5" target="_blank">
+                                <a href="https://youtu.be/-8GBYjpyL1c" target="_blank">
                                     <img class="card_g_img" src="image/work5.png" data-toggle="tooltip" data-placement="right" title="點擊圖片進入youtube"></a>
                                 <card-title><t-20>memoscape.</t-20></card-title> <br>
                                 <card-title><t-16>最佳切題獎</t-16></card-title> 
@@ -866,10 +832,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-11 col-md-6" style="margin: 0;">
+                    <div class="col-12 col-md-6" style="margin: 0;">
                         <div class="card_a">
                             <div class="card_a_show">
-                                <a href="https://www.youtube.com/watch?v=pCtAFKTj8-A&list=PL5Zz58VdLY58wGAr6sZ5gf8XR5R-awn5T&index=6" target="_blank">
+                                <a href="https://youtu.be/WEA_fWzaCG0" target="_blank">
                                     <img class="card_g_img" src="image/work6.png" data-toggle="tooltip" data-placement="right" title="點擊圖片進入youtube"></a>
                                 <card-title><t-20>Walking Workie</t-20></card-title> <br>
                                 <card-title><t-16>最佳技術獎</t-16></card-title> 
@@ -888,10 +854,10 @@
                     </div>
                 </div>
                 <div class="row  justify-content-around">
-                    <div class="col-11 col-md-6" style="margin: 0;">
+                    <div class="col-12 col-md-6" style="margin: 0;">
                         <div class="card_a">
                             <div class="card_a_show">
-                                <a href="https://www.youtube.com/watch?v=pCtAFKTj8-A&list=PL5Zz58VdLY58wGAr6sZ5gf8XR5R-awn5T&index=7" target="_blank">
+                                <a href="https://youtu.be/ZOiKG2sW1_0" target="_blank">
                                     <img class="card_g_img" src="image/work7.png" data-toggle="tooltip" data-placement="right" title="點擊圖片進入youtube"></a>
                                 <card-title><t-20>氛享</t-20></card-title> <br>
                                 <card-title><t-16>最佳人氣獎</t-16></card-title> 
@@ -907,10 +873,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-11 col-md-6" style="margin: 0;">
+                    <div class="col-12 col-md-6" style="margin: 0;">
                         <div class="card_a">
                             <div class="card_a_show">
-                                <a href="https://www.youtube.com/watch?v=pCtAFKTj8-A&list=PL5Zz58VdLY58wGAr6sZ5gf8XR5R-awn5T&index=8" target="_blank">
+                                <a href="https://youtu.be/YgKbFm13u4E" target="_blank">
                                     <img class="card_g_img" src="image/work8.png" data-toggle="tooltip" data-placement="right" title="點擊圖片進入youtube"></a>
                                 <card-title><t-20>憶起亂掰</t-20></card-title> <br>
                                 <card-title><t-16>最佳Demo獎</t-16></card-title> 
@@ -930,6 +896,16 @@
             </div>
         </section>
 
+        <div id="Group_href"></div>
+        <!-- section Group -->
+        <section id = "Group">
+            <div class= "box">
+                <div class="box-title T-E">Group</div>
+                <div class="box-title T-C">團隊</div>
+            </div>
+        </section>
+        
+
         <!-- section organizer -->
         <section id = "organizer">
             <div class="card_e">
@@ -939,10 +915,11 @@
                         <div class="box-title T-C">籌辦單位</div>
                         <div class="row justify-content-around">
                             <div class="col-8 col-md-3 row justify-content-center" style="margin: 10% 0; align-items: center;">
-                                <img class="img-fluid" style="width: 100%;" src="./image/主辦單位/ntust.png" >
+                                <logo><img class="img-fluid" style="width: 100%;" src="./image/主辦單位/ntust.png" ></logo>
                             </div>
-
-                            <svg class="col-8 col-md-3 row justify-content-center" style="fill:#fff; margin:5% 0;" version="1.1" id="layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 222.31 67.87" style="enable-background:new 0 0 222.31 67.87;" xml:space="preserve">
+                            
+                            <logo class="col-8 col-md-3 row justify-content-center">
+                                <svg class="justify-content-center"  style="fill:#fff; margin:5% 0;" version="1.1" id="layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 222.31 67.87" style="enable-background:new 0 0 222.31 67.87;" xml:space="preserve">
                                 <g>
                                     <g>
                                         <g>
@@ -979,10 +956,11 @@
                                         </g>
                                     </g>
                                 </g>
-                            </svg>
+                                </svg>
+                            </logo>
                             
                             <div class="col-9 col-md-3 row justify-content-center" style="margin: 10% 0; align-items: center;">
-                                <img class="img-fluid" style="width: 100%;" src="./image/主辦單位/dct.png" >
+                                <logo><img class="img-fluid" style="width: 100%;" src="./image/主辦單位/dct.png" ></logo>
                             </div>
                         </div>
                     </div>
@@ -992,10 +970,10 @@
                         <div class="box-title T-C">協辦單位</div>
                         <div class="row justify-content-around">
                             <div class="col-9 col-md-5 row justify-content-center" style="margin: 10% 0; align-items: center;">
-                                <img class="img-fluid" style="width: 100%;" src="./image/sponsor logo/FB_ITSA_bar.png" >
+                                <logo><img class="img-fluid" style="width: 100%;" src="./image/sponsor logo/FB_ITSA_bar.png" ></logo>
                             </div>
                             <div class="col-9 col-md-5 row justify-content-center" style="margin: 10% 0; align-items: center;">
-                                <img class="img-fluid" style="width: 100%;"  src="./image/sponsor logo/TAICHI_Logo(橫).png" >
+                                <logo><img class="img-fluid" style="width: 100%;"  src="./image/sponsor logo/TAICHI_Logo(橫).png" ></logo>
                             </div>
                         </div>
                     </div>
@@ -1010,13 +988,13 @@
                     <div class="box-title T-C">贊助單位</div>
                     <div class="row justify-content-around">
                         <div class="col-7 col-md-4 row justify-content-center" style="margin: 10% 0; align-items: center;">
-                            <img class="img-fluid" style="width: 100%;" src="./image/sponsor logo/AJA.png" >
+                            <logo><img class="img-fluid" style="width: 100%;" src="./image/sponsor logo/AJA.png" ></logo>
                         </div>
                         <!-- <div class="col-11 col-md-5 row justify-content-center" style="margin: 10% 0;">
                             <img class="img-fluid" src="./image/sponsor logo/機器人王國.png" >
                         </div> -->
                         <div class="col-7 col-md-4 row justify-content-center" style="margin: 10% 0; align-items: center;">
-                            <img class="img-fluid" style="width: 100%;" src="./image/sponsor logo/CAVEDU.png" >
+                            <logo><img class="img-fluid" style="width: 100%;" src="./image/sponsor logo/CAVEDU.png" ></logo>
                         </div>
                     </div>
                 </div>
@@ -1085,7 +1063,13 @@
                     </a>
                 </li>
                 <li class="slide-nav-items">
-                    <a class="nav-link"  id="menu5"  href="#Group">
+                    <a class="nav-link"  id="menu5"  href="#Previous">
+                        <span class="slide-text">歷屆作品</span>
+                        <img class="side-nav-icon" src="image/tree.png">
+                    </a>
+                </li>
+                <li class="slide-nav-items">
+                    <a class="nav-link"  id="menu6"  href="#Group">
                         <span class="slide-text">籌辦團隊</span>
                         <img class="side-nav-icon" src="image/tree.png">
                     </a>
