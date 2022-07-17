@@ -6,6 +6,14 @@
   src: url("../SF_Pro_Display/SFPRODISPLAYREGULAR.woff") format("woff"), url("../SF_Pro_Display/SFPRODISPLAYREGULAR.ttf") format("truetype"), url("../SF_Pro_Display/SFPRODISPLAYREGULAR.eot") format("embedded-opentype");
 }
 
+element {
+    -webkit-overflow-scrolling: touch;
+}
+
+element > * {
+    -webkit-transform: translateZ(0px);
+}
+
 html {
   width: 100%;
   margin: 0 auto;
