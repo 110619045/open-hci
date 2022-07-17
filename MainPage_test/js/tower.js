@@ -41,13 +41,13 @@ function main(z_coord, y_coord) {
     scene.add(light);
     // controls.update();
 
-    function animate() {
-        if (tower) tower.rotation.y += 0.005;
-        requestAnimationFrame(animate);
-        // controls.update();
-        renderer.render(scene, camera);
-    }
-    animate();
+//     function animate() {
+//         if (tower) tower.rotation.y += 0.005;
+//         requestAnimationFrame(animate);
+//         // controls.update();
+//         renderer.render(scene, camera);
+//     }
+//     animate();
 }
 // main();
 export { main }
