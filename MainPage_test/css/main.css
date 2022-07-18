@@ -1232,7 +1232,8 @@ logo{
 }
 
 .fade_in_logo {
-  position: relative !important;
+/*   position: relative !important; */
+  position: static;
   opacity: 1;
   animation-duration: 2s;
   transition: opacity 2000ms ease-in;
