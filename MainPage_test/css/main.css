@@ -321,6 +321,7 @@ white-line {
   width: 70%;
   float: left;
   font-size: 1.2em;
+  ;
   line-height: 120%;
   text-align: justify;
   text-justify: distribute-all-lines;
@@ -334,8 +335,7 @@ white-line {
   align-items: center;
   justify-content: center;
   align-content: center;
-/*   position: relative; */
-  position: static
+  position: relative;
   background-color: rgba(22, 22, 22, 0.9);
   box-shadow: inset 0px -30px 15px -10px rgba(34, 34, 34, 1);
 }
@@ -388,7 +388,7 @@ white-line {
   justify-content: space-between;
   align-items: center;
   padding: 30px;
-  position: static;
+  position: relative;
 }
 
 #Previous .card_a_close {
@@ -1191,7 +1191,7 @@ white-line {
 
 section {
   opacity: 0;
-  position: static;
+  position: relative !important;
   /* transform: translateX(50%); */
   overflow-x: hidden;
 }
@@ -1219,8 +1219,7 @@ section:nth-of-type(15) {
 }
 
 .fade_in {
-/*   position: relative !important; */
-  position: static;
+  position: relative !important;
   opacity: 1;
   /* transform: translateX(0%); */
   /* transition: opacity 500ms ease-in, transform 500ms ease-out; */
@@ -1232,8 +1231,7 @@ logo{
 }
 
 .fade_in_logo {
-/*   position: relative !important; */
-  position: static;
+  position: relative !important;
   opacity: 1;
   animation-duration: 2s;
   transition: opacity 2000ms ease-in;
