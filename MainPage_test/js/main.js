@@ -1,3 +1,7 @@
+if ( iPhone|iPad|iPod/i.test(navigator.platform)) {
+  window.location.href= "https://blog.xuite.net/tolarku/blog/66314217";
+}
+
 import { main } from "./tower.js"
 
 $(function() {
