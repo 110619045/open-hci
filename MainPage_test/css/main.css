@@ -1219,7 +1219,8 @@ section:nth-of-type(15) {
 }
 
 .fade_in {
-  position: relative !important;
+/*   position: relative !important; */
+  position: static;
   opacity: 1;
   /* transform: translateX(0%); */
   /* transition: opacity 500ms ease-in, transform 500ms ease-out; */
