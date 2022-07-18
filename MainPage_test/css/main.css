@@ -1191,7 +1191,7 @@ white-line {
 
 section {
   opacity: 0;
-  position: relative !important;
+  position: static;
   /* transform: translateX(50%); */
   overflow-x: hidden;
 }
