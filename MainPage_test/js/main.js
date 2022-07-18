@@ -615,12 +615,3 @@ const previousWork = [{
     "description": "現代的生活忙碌，人們已經習慣於科技幫助我們保存生活中的回憶，然而科技呈現回憶的方式無法激起人們的情緒感受，我們好奇，有沒有一種可以激起人們情緒感受的回憶方式？",
     "url": "https://www.youtube.com/watch?v=YgKbFm13u4E&list=PL5Zz58VdLY58wGAr6sZ5gf8XR5R-awn5T&index=8"
 }]
-
-
-
-
-
-
-
-
-
