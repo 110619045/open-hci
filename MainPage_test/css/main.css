@@ -321,7 +321,6 @@ white-line {
   width: 70%;
   float: left;
   font-size: 1.2em;
-  ;
   line-height: 120%;
   text-align: justify;
   text-justify: distribute-all-lines;
@@ -335,7 +334,8 @@ white-line {
   align-items: center;
   justify-content: center;
   align-content: center;
-  position: relative;
+/*   position: relative; */
+  position: static
   background-color: rgba(22, 22, 22, 0.9);
   box-shadow: inset 0px -30px 15px -10px rgba(34, 34, 34, 1);
 }
@@ -388,7 +388,7 @@ white-line {
   justify-content: space-between;
   align-items: center;
   padding: 30px;
-  position: relative;
+  position: static;
 }
 
 #Previous .card_a_close {
