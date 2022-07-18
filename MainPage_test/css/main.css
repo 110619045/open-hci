@@ -14,6 +14,7 @@ html {
   position: absolute;
   top: 0%;
   left: 0%;
+  --webkit-overflow-scrolling:touch;
 }
 
 body {
@@ -28,6 +29,11 @@ body {
   margin: 0 auto;
   overflow-x: hidden;
   justify-content: space-around;
+  min-height: calc(100% + 1px);
+  overflow-y: scroll;
+  overflow-x: hidden; 
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
 }
 
 .test {
@@ -334,8 +340,6 @@ white-line {
   position: relative;
   background-color: rgba(22, 22, 22, 0.9);
   box-shadow: inset 0px -30px 15px -10px rgba(34, 34, 34, 1);
-
-  -webkit-transform: translate3d(0, 0, 0);
 }
 
 .main_phone .row {
@@ -387,8 +391,6 @@ white-line {
   align-items: center;
   padding: 30px;
   position: relative;
-
-  -webkit-transform: translate3d(0, 0, 0);
 }
 
 #Previous .card_a_close {
@@ -700,8 +702,6 @@ white-line {
   color: rgba(255, 255, 255, 0.6);
   position: relative;
   letter-spacing: 0.06em;
-
-  -webkit-transform: translate3d(0, 0, 0);
 }
 
 .slide-text:before {
@@ -809,8 +809,6 @@ white-line {
   line-height: 1.5;
   position: relative;
   justify-content: flex-end;
-
-  -webkit-transform: translate3d(0, 0, 0);
 }
 
 #home .slide-nav-items {
@@ -1198,8 +1196,6 @@ section {
   position: relative !important;
   /* transform: translateX(50%); */
   overflow-x: hidden;
-
-  -webkit-transform: translate3d(0, 0, 0);
 }
 
 section:nth-of-type(1) {
@@ -1230,8 +1226,6 @@ section:nth-of-type(15) {
   /* transform: translateX(0%); */
   /* transition: opacity 500ms ease-in, transform 500ms ease-out; */
   transition: opacity 500ms ease-in;
-
-  -webkit-transform: translate3d(0, 0, 0);
 }
 
 logo{
@@ -1243,8 +1237,6 @@ logo{
   opacity: 1;
   animation-duration: 2s;
   transition: opacity 2000ms ease-in;
-
-  -webkit-transform: translate3d(0, 0, 0);
 }
 
 /* Tower canvas 設定 */
