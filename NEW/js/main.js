@@ -18,7 +18,7 @@ function detectiOS() {
         let scroll = new SmoothScroll('html', {easing: 'linear'});
         const el = document.querySelector('html');
         el.style.scrollBehavior = 'smooth';
-	el.style.-webkit-overflow-scrolling = 'touch';
+// 	el.style.-webkit-overflow-scrolling = 'touch';
       }
 }
 detectiOS();
