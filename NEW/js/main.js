@@ -1,42 +1,42 @@
-import { main } from "./tower.js"
+// import { main } from "./tower.js"
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
 //document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-function detectiOS() {
-    if( [
-        'iPad Simulator',
-        'iPhone Simulator',
-        'iPod Simulator',
-        'iPad',
-        'iPhone',
-        'iPod'
-      ].includes(navigator.platform) || (navigator.userAgent.includes("Mac") && "ontouchend" in document)){
-        //alert("ios");
-        let scroll = new SmoothScroll('html', {easing: 'linear'});
-        const el = document.querySelector('html');
-        el.style.scrollBehavior = 'smooth';
-// 	el.style.-webkit-overflow-scrolling = 'touch';
-      }
-}
-detectiOS();
+// function detectiOS() {
+//     if( [
+//         'iPad Simulator',
+//         'iPhone Simulator',
+//         'iPod Simulator',
+//         'iPad',
+//         'iPhone',
+//         'iPod'
+//       ].includes(navigator.platform) || (navigator.userAgent.includes("Mac") && "ontouchend" in document)){
+//         //alert("ios");
+//         let scroll = new SmoothScroll('html', {easing: 'linear'});
+//         const el = document.querySelector('html');
+//         el.style.scrollBehavior = 'smooth';
+// // 	el.style.-webkit-overflow-scrolling = 'touch';
+//       }
+// }
+// detectiOS();
 
 $(function() {
 // model position control
     let windowSize = window.matchMedia("(min-width: 768px)")
-    let mainTower;
-    function modelControl(size) {
-        if (size.matches) { // If media query matches
-            mainTower = main(750, -20, true);
-        } else {
-            mainTower = main(485, 0, false);
-        }
-        mainTower;
-    }
-    modelControl(windowSize) // Call listener function at run time
-    windowSize.addListener(modelControl);    
+//     let mainTower;
+//     function modelControl(size) {
+//         if (size.matches) { // If media query matches
+//             mainTower = main(750, -20, true);
+//         } else {
+//             mainTower = main(485, 0, false);
+//         }
+//         mainTower;
+//     }
+//     modelControl(windowSize) // Call listener function at run time
+//     windowSize.addListener(modelControl);    
 //btn open
     $(".panel-collapse").on('show.bs.collapse', function() {
         $(this).siblings('.card_a_close').addClass('active');
